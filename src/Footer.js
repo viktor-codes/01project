@@ -1,12 +1,10 @@
 import React from 'react'
 
-const Footer = () => {
-  const today = new Date();
-
+const Footer = ({length}) => {
   return (
     <footer>
         <p>
-            Copyright &copy; {today.getFullYear()}
+            {length ? `You have ${length} items in your list.` : "Your list is empty."}
         </p>
     </footer>
   )
